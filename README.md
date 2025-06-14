@@ -10,12 +10,6 @@ mlibc is capable enough to run a range of software, including Xorg, several Wayl
 
 Individual operating systems can opt in or out of certain features as desired; for example POSIX APIs like `pthread` are gated behind the POSIX 'option', Linux APIs like `epoll` are gated behind the Linux option, etc.
 
-![Continuous Integration](https://github.com/managarm/mlibc/workflows/Continuous%20Integration/badge.svg)
-
-**Official Discord server:** https://discord.gg/7WB6Ur3
-
-**AUR package** (provides `mlibc-gcc`): https://aur.archlinux.org/packages/mlibc
-
 ## Design of the library
 
 | Directory | Purpose |
