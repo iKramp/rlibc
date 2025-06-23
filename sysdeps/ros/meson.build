@@ -6,14 +6,10 @@ sysdep_supported_options = {
 }
 
 rtld_sources += files(
-	'generic/generic.cpp'
 )
 
 libc_sources += files(
-	'generic/entry.cpp',
-	'generic/generic.cpp',
-	'generic/thread.cpp',
-	'generic/thread_entry.S'
+
 )
 
 if not no_headers

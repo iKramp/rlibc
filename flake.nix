@@ -15,7 +15,6 @@
     }:
     let
       system = "x86_64-linux";
-      target = "x86_64-elf";
       pkgs = import nixpkgs { inherit system; };
 
     in
@@ -31,12 +30,14 @@
           cmake
           pkg-config
           libcxx
+          ninja
+          llvmPackages.clang
+          llvmPackages.llvm
+          llvmPackages.compiler-rt
         ];
 
         shellHook = ''
-          export CROSS_COMPILE=${target}-
-          export CC=${target}-gcc
-          zsh -c 'nvim'
+          exec zsh -c 'nvim'
         '';
       };
     };

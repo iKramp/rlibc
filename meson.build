@@ -275,6 +275,7 @@ elif host_machine.system() == 'nyaux'
 elif host_machine.system() == 'ros'
     rtld_include_dirs += include_directories('sysdeps/ros/include')
     libc_include_dirs += include_directories('sysdeps/ros/include')
+	subdir('sysdeps/ros')
 else
 	error('No sysdeps defined for OS: ' + host_machine.system())
 endif
